@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Enter the table number"
+read n
+
+echo "Enter the range:"
+read range
+
+echo "Multiplication table for $n up to range $range"
+
+for ((i=1; i<=range; i++))
+do
+    echo "$i X $n = $((n*i))"
+done
