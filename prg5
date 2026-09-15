@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo "Filter Commands Demo"
+
+cp /etc/passwd passwd
+
+echo "Lines, words and characters in passwd:"
+wc passwd
+
+echo "Lines containing the word root:"
+grep -n "root" passwd | more
+
+echo "Count of lines containing root:"
+grep -c "root" passwd
+
+echo "Lines that do NOT contain root:"
+grep -v "root" passwd | more
+
+echo "Replace ':' with '*' in passwd:"
+tr ':' '*' < passwd | more
+
+echo "First column (usernames) of passwd:"
+cut -d':' -f1 passwd
