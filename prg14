@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # a. Recent system log entries
 echo "--- Recent System Log Entries ---"
 tail -20 /var/log/messages 2>/dev/null || journalctl -n 20
