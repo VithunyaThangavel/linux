@@ -1,0 +1,17 @@
+touch ~/mylog.log
+
+echo "$(date) - INFO - User logged In" >> ~/mylog.log
+
+echo "$(date) - INFO - User opened Application" >> ~/mylog.log
+
+echo "$(date) - WARNING - Incorrect Password Entered" >> ~/mylog.log
+
+echo "$(date) - INFO - User Logged Out" >> ~/mylog.log
+
+tail -f ~/mylog.log
+
+last | tail -10
+
+grep WARNING mylog.log
+
+grep INFO mylog.log
